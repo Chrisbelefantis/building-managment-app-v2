@@ -1,0 +1,113 @@
+.navbar-custom { 
+    background-color: #34827c; 
+} 
+
+.navbar-custom .navbar-brand, 
+.navbar-custom .navbar-text { 
+	margin-top: 5px;
+    color: white; 
+} 
+
+.colored-div {
+	padding: 11% 5% 1% 5%;
+	margin-bottom: 20px;
+	background-color: #EBEBEB;
+	background-clip: border-box;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+
+	
+}
+
+.container{
+	margin-top: 2vh;
+	padding-bottom: 25px;
+	color: #0B032D;
+	background-color: white;
+}
+
+.modal-content {
+	padding: 3%;
+	border-radius: 10px;
+}
+
+img {
+
+	margin: 0 auto 15px auto;
+	display: block;
+	height: 70px;
+	width: 70px;
+
+}
+
+ul {
+	margin: 10px 0 20px 0;
+}
+
+li {
+	font-size: 15px;
+	list-style-type: none;
+}
+
+h1{ 
+	color: #0B032D;
+}
+
+.modal-footer {
+	display: flex;
+	justify-content: center;
+}
+
+#passwordHelp {
+	margin-left: 19px;
+	margin-right: 19px;
+	text-align: center;
+}
+
+#errorMessage {
+	text-align: center;
+}
+.custom {
+    width: 78px !important;
+}
+
+.btn {
+	background-color:#34827c;
+	border-color: #34827c;
+}
+
+.btn:hover {
+	background-color:#225551;
+	border-color: #225551;
+
+}
+@media only screen and (min-width: 768px) {
+	.container {
+		margin-top: 15vh;
+		border-radius: 10px;
+		margin-top: 15vh;
+		border-radius: 10px;
+		-webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    	-moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    	box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    	padding-bottom: 0;
+	}
+	.colored-div {
+		border-left: 1px solid #ccc;
+		border-bottom-left-radius: 10px;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 0px;
+		padding: 11% 5% 11% 5%;
+		margin-bottom: 0;
+	}
+}
+
+
+@media only screen and (min-width: 992px) {
+	.container{
+
+		width: 800px;
+	}
+}
+
+
