@@ -1,1 +1,82 @@
-<h1>admin</h1>
+<%- include ('../partials/admin-header.ejs',{section:'building_management'})  %> 
+
+<div class="main-container">
+
+    <h1>Καταχωρημένες Πολυκατοικίες</h1>
+    <br>
+    <table class="table">
+    <thead>
+        <tr>
+        <th scope="col">Μοναδικός Κωδικός</th>
+        <th scope="col">Οδός</th>
+        <th scope="col">Αριθμός</th>
+        <th scope="col">Περιοχή</th>
+        <th scope="col">Πόλη</th>
+        <th scope="col">Διαμερίσματα/'Οροφο</th>
+        <th scope="col">'Οροφοι</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <th scope="row">1334</th>
+        <td>Αθανασίου Διάκου</td>
+        <td>61-63</td>
+        <td>Πετρούπολη</td>
+        <td>Αθήνα</td>
+        <td>2</td>
+        <td>5</td>
+        </tr>
+        <tr>
+        <th scope="row">1722</th>
+        <td>Αράτου</td>
+        <td>22</td>
+        <td>Χαλάνδρι</td>
+        <td>Αθήνα</td>
+        <td>3</td>
+        <td>4</td>
+        </tr>
+        <tr>
+        <th scope="row">1826</th>
+        <td>Παπαφλέσσα</td>
+        <td>125</td>
+        <td>Καλύβια</td>
+        <td>Λαμία</td>
+        <td>4</td>
+        <td>6</td>
+        </tr>
+        <th scope="row">1289</th>
+        <td>Καραισκάκη</td>
+        <td>12</td>
+        <td>Περιστέρι</td>
+        <td>Αθήνα</td>
+        <td>2</td>
+        <td>5</td>
+        </tr>
+    </tbody>
+    </table>
+    <br>
+    <br>
+    <nav class="navbar navbar-light bg-light justify-content-center">
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Μοναδικός Κωδικός" aria-label="Search">
+            <button type="submit" class="btn btn-outline-dark">Αναζήτηση</button>
+            <a href="building_submission.php" type="button" class="ml-3 btn btn-primary">Προσθήκη Νέας Πολυκατοικίας</a>
+        </form>
+    </nav>
+    <br>
+    <br>
+
+    <div class='Box'>
+        <p>Παρακαλούμε επιλέξτε την πολυκατοικία για την οποία θα θέλατε να εκτελέστε τις παρακάτω ενέργειες</p>
+        <button type="button" class="btn btn-dark">Προσθήκη Νέου Χρήστη</button>
+        <button type="button" class="btn btn-dark">Αφαίρεση Χρήστη</button>
+        <button type="button" class="btn btn-dark">Επεξεργασία Χρήστη</button>
+        <button type="button" class="btn btn-dark">Επεξεργασία στοιχείων Πολυκατοικίας</button>
+    </div>
+
+
+
+</div>
+
+
+<%- include ('../partials/admin-footer.ejs')  %> 

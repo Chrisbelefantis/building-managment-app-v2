@@ -8,19 +8,15 @@ const checkAuth = require('./middleware/checkAuth');
 
 const port = 3000
 
-
 const userRoutes = require('./routes/user')
 const adminRoutes = require('./routes/admin')
 
 const app = express()
 
 app.set('view engine', 'ejs');
+
 app.use(express.static(__dirname + '/public'))
-
-
-// To support URL-encoded bodies
 app.use(bodyParser.urlencoded({ extended: true }));
-// To parse cookies from the HTTP Request
 app.use(cookieParser());
 
 app.get('/',(req, res) => {
@@ -84,6 +80,11 @@ app.post('/login',(req,res)=>{
             
         }
     );
+})
+
+app.get('/logout',(req,res)=>{
+    res.clearCookie("AuthToken");
+    res.redirect("/");
 })
 
 app.use('/user',checkAuth('user'),userRoutes)

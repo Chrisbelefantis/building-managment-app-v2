@@ -1,0 +1,20 @@
+
+.main-container{
+    width: 100%;
+    float: right;
+    height: 90vh;
+    position: relative; 
+    overflow-y: scroll;
+
+}
+
+h4 {
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .main-container{
+        width: calc(100% - 210px);
+        padding: 20px;
+    }
+}

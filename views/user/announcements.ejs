@@ -1,0 +1,54 @@
+<%- include ('../partials/user-header.ejs',{section: 'announcements'})  %> 
+
+
+
+<div class="main-container">
+
+    <div class='Box-announcement'>
+        <h6><strong>Ανακοίνωση:</strong> Θα πραγματοποιηθεί διακοπή ρεύματος την τρίτη 5/6/21 από τις 14:00 εως τις 15:00</h6>
+        <br>
+        <p><strong>Posted by:</strong> Διαχειριστής Πολυκατοικίας  At: 21/05/21 12:21:35</p>
+    </div>
+
+    <div class="appartment-damage">
+        <h6><strong>Δήλωση Νέας Βλάβης:</strong></h6>
+        <h6><strong>Κατηγορία:</strong> Ηλεκτρολογικά</h6>
+        <h6><strong>Περιγραφή:</strong> κάηκε η λάμπα στην είσοδο της πολυκατοικίας</h6>
+        <br>
+        <p><strong>Posted by:</strong> Γιώργος Αλογδιανάκης, Γ4  At: 20/04/21 13:22:42</p>
+    </div>
+
+    <div class="poll-Box">
+        <h6><strong>Υπεβλήθη νέα δημοσκόπηση:</strong></h6>
+        <h6><strong>Περιγραφή:</strong> Θα κάνω πάρτι στις 19 του μήνα. Παρακαλώ ενημερώστε με αν έχετε θέμα!</h6>
+        <h6>Η δημοσκόπηση λήγει στις: 18/3/20 23:59:99</h6>
+        <div class="row align-items-center">
+        <div class="col-8">
+            <canvas id='myChart'width="1400" height="400"></canvas>
+        </div>
+        <div class="col-4 text-center">
+            <a href='#' type="button" class="btn btn-secondary" style="background-color:#A9A9A9; width:50%;">Ψηφήστε</a>       
+        </div>
+        </div>
+        <br>
+        <p><strong>Posted by:</strong> Γιώργος Γουρνιεζάκης, Β2  At: 20/04/21 13:22:42</p>
+    </div>
+    <br>
+
+
+            <div class="row">
+                <div class="col">
+                    <button type="button" class="btn btn-secondary btn-lg btn-block" style="background-color:#34827c; ">Προσθέστε Νέα Ανακοίνωση</button>
+                </div>
+                <div class="col">
+                    <a href='../views/user/add_poll.php' type="button" class="btn btn-secondary btn-lg btn-block" style="background-color:#A9A9A9;">Προσθέστε Νέα δημοσκόπηση</a>       
+                </div>
+            </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script type="text/javascript" src="/js/graph.js"></script>
+
+
+<%- include ('../partials/user-footer.ejs')  %> 

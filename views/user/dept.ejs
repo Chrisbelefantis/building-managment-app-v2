@@ -1,1 +1,113 @@
-<h1>user</h1>
+<%- include ('../partials/user-header.ejs',{section: 'dept'})  %> 
+
+<div class="main-container">
+    <h4>Λογαριασμός Κοινοχρήστων</h4>
+    <br>
+    <table class="table text-center">
+        <thead>
+            <tr>
+                <th scope="col">Διεύθυνση Πολυκατοικίας</th>
+                <th scope="col">Όροφος Διαμερίσματος</th>
+                <th scope="col">Νούμερο Πολυκατοικίας</th>
+                <th scope="col">Ονοματεπώνυμο Ενοίκου</th>
+                <th scope="col">Διάρκεια Λογαριασμού</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Αθανασίου Διάκου</th>
+                <td>3</td>
+                <td>61-63</td>
+                <td>Γιώργος Γουρνιεζάκης</td>
+                <td>22/07/2021 - 25/08/2021</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <table class="table text-center">
+        <thead>
+            <tr>
+                <th scope="col">Τίτλος Εξόδου</th>
+                <th scope="col">Συμμετέχοντες</th>
+                <th scope="col">Συνολικό Ποσό</th>
+                <th scope="col">Συντελεστής Διαμερίσματος</th>
+                <th scope="col">Συμμετοχή</th>
+            </tr>
+        </thead>
+        <tbody class="text-center">
+            <tr>
+                <td>Συντήρηση Ανελκυστήρα</th>
+                <td>Ένοικος</td>
+                <td>65$</td>
+                <td>39/10000</td>
+                <td>2,54$</td>
+            </tr>
+            <tr>
+                <td>Τοπικός Καθαρισμός</th>
+                <td>Ένοικος</td>
+                <td>70$</td>
+                <td>39/10000</td>
+                <td>2,54$</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <br>
+    <table class="table">
+        <tbody>
+            <tr>
+                <td><strong>'Εξοδο Ιδιοκτησίας<strong></td>
+                <td> ?>€</td>
+            </tr>
+            <tr>
+                <td><strong>Έξοδα Ενοικιαστή<strong></td>
+                <td>€</td>
+            </tr>
+
+            <tr>
+                <td><strong>'Εκπρόθεσμα Ποσά' ή  'Ποσό Από Ρύθμιση Οφειλής'<strong></td>
+                <td>€</td>
+            </tr>
+
+            <tr>
+                <td><strong>Σύνολο<strong></td>
+                <td>100€</td>
+            </tr>
+           
+        </tbody>
+    </table>
+
+    <button type="button" class="btn btn-secondary btn-lg btn-block" style="background-color:#34827c;">Ρύθμιση οφειλής</button>
+    <a class="btn btn-secondary btn-lg btn-block" href="make_payment_controller.php" style="background-color:#A9A9A9;">Πληρωμή Ολόκληρου Ποσού</a>
+</div>
+
+
+<!-- Payment Modal -->
+    <!-- <div class="modal d-block fade"  id="paymentModal" tabindex="-1" role="dialog"   aria-labelledby="paymentModalLabel" style="background-color: rgba(0,0,0,0.5);">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="paymentModalLabel">Επιλέξτε τρόπο πληρωμής</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body text-center">
+            <select class="form-control form-control-lg">
+                <option>Πειραιώς e-banking</option>
+                <option>Ενθική e-banking</option>
+                <option>PayPal</option>
+            </select>
+        </div>
+        
+
+        <div class="modal-footer">
+            <a class="btn btn-primary"style="background-color:#34827c;">Πληρωμή Ολόκληρου Ποσού</a>
+            <a class="btn btn-secondary" style="background-color:#A9A9A9;">Close</a>
+        </div>
+        </div>
+    </div>
+    </div> -->
+
+
+<%- include ('../partials/user-footer.ejs')  %> 

@@ -6,4 +6,8 @@ router.get('/dept',(req,res)=>{
     res.render('user/dept')
 });
 
+router.get('/announcements',(req,res)=>{
+    res.render('user/announcements')
+});
+
 module.exports = router;

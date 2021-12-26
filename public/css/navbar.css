@@ -1,0 +1,161 @@
+.navbar-custom { 
+    background-color: #0b032d10; 
+    float: left;
+    width: 210px;
+    display: none;
+
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #34827c;
+    position: relative;
+    display: block;
+    }
+
+
+.navbar-brand {
+    color: #fafafa;
+    margin:0px 0px 0px 0px !important;
+    padding: 16px 16px 16.5px 16px !important;
+    float: inline-start;
+    font-size: 20px;
+    transition: 1s;
+    text-align: center;
+}
+
+.navbar-brand.opened{
+ background-color: #fafafa;
+ color: #0B032D; 
+transition: 1s;
+}
+
+.navbar-brand.closed:hover ,.navbar-brand:hover{
+    color: #fafafa;
+}
+
+.navbar-brand.opened:hover{
+    color: #0B032D;
+}
+
+li {
+	margin-top: 0;
+	list-style-type: none;
+    font-size: 17px;
+}
+
+.nav-link {
+    color: #0B032D;
+    font-weight: 500;
+    
+}
+
+.nav-link:hover {
+    color: #0B032D; 
+    background-color: #fafafa;
+    transition:0.2s;
+}
+
+body {
+    background-color: #FAFAFA;
+    
+}
+  
+.navigation{
+    font-size: 24px;
+    font-weight: 500;
+    color: #0B032D;
+    padding-left: 19px;
+    padding-top: 5px;
+    margin-bottom: 15px;
+}
+
+
+.nav-link svg{
+    margin-right: 5px ;
+}
+
+.topnav a {
+color: #fafafa;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 20px;
+display: block;
+}
+
+#menu-button{
+color: #fafafa;
+display: block;
+position: absolute;
+right: 0;
+top: 0;
+
+}
+
+#menu-button:hover{
+cursor: pointer;
+color: #0B032D;
+display: block;
+position: absolute;
+right: 0;
+top: 0;
+}
+
+#menu-button.opened{
+color: #0B032D;
+display: block;
+position: absolute;
+right: 0;
+top: 0;
+}
+
+#menu-button.opened:hover{
+color: #fafafa;
+background-color: #0B032D;
+display: block;
+position: absolute;
+right: 0;
+top: 0;
+}
+
+.current-link{
+    
+    border-right: 5px solid white;
+}
+
+@media only screen and (min-width: 768px) {
+
+    #menu-button{
+        display: none;
+    }    
+
+    .navbar-brand{
+        text-align: left;
+    }
+ 
+    .navbar-custom {
+        height: calc(100vh - 68px);
+        display: flex;
+        flex-direction: column;
+       
+    }   
+
+  
+
+    .navbar-custom li:last-of-type{
+        margin-top: auto;
+        margin-bottom: 50px;
+        
+    }
+    .current-link{
+        background-color: white;
+        border-right: 5px solid #0B032D;
+    }
+
+    .topnav #myLinks{
+        display: none;
+    }
+
+
+}
+

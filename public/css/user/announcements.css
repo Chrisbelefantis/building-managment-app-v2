@@ -1,0 +1,63 @@
+
+.main-container{
+    width: 100%;
+    float: right;
+    height: 90vh;
+    position: relative; 
+    overflow-y: scroll;
+}
+
+.Box-announcement {
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    background-color: #DEB887;
+    border-radius:5px ;
+    border: 1px solid black;
+}
+
+.appartment-damage{
+    border: 1px solid black;
+    margin: 5px;
+    width: 100%;
+    padding: 10px;
+    background-color: #de8585;
+    border-radius:5px ;
+}
+
+.poll-Box {
+    border: 1px solid black;
+    margin: 5px;
+    width: 100%;
+    padding: 10px;
+    background-color: #00FFFF;
+    border-radius:5px ;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+p {
+    font-size: 12px;
+}
+
+h4 {
+    text-align: center;
+}
+
+h6 {
+    font-weight: normal;
+}
+
+@media only screen and (min-width: 768px) {
+    .main-container{
+        width: calc(100% - 210px);
+        padding: 50px;
+    }
+}
