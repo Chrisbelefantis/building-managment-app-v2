@@ -11,8 +11,11 @@
     background-color: #34827c;
     position: relative;
     display: block;
-    }
+}
 
+.admin .topnav{
+    background-color: #061458cc;
+}
 
 .navbar-brand {
     color: #fafafa;
