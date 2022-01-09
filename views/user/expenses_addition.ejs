@@ -1,46 +1,81 @@
 <%- include ('../partials/user-header.ejs',{section: 'expenses_addition', isBuldingAdmin: userData.isAppartmentBuildingAdmin })  %> 
 
+
+<% if (locals.message) { %>
+  <div class="modal show" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Κοινόχρηστα</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p> <%- message %> </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <script>
+      $(window).on('load', function() {
+        $('#myModal').modal('show');
+    });
+  </script>
+ 
+<% } %>
+
+
 <div class="main-container">
     <h2>Φόρμα Προσθήκης Εξόδων σε Πολυκατοικία</h2>
 
    
-    <form>
-        <div>
-            <b >Επιλέξτε Πολυκατοικία</b>
+    <form action="/user/expenses-addition/add" method="POST">
+        <div class="form-group row">
+          <label for="expenseCategory" class="col-sm-2 col-form-label">Κατηγορία Εξόδου</label>
+          <select id="expenseCategory" name="expenseCategory" class="col-sm-10 form-control form-control-md">
+            <option>Συντήρηση</option>
+            <option>Βλάβες</option>
+            <option>Έξοδα Εφαρμογής</option>
+          </select>
         </div>
-        <div class="bottom-div">
-            <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Επιλέξτε πολυκατοικία
-            </a>
+        <div class="form-group row">
+          <label for=" amount" class="col-sm-2 col-form-label">Ποσό</label>
+          <div class="col-sm-10">
+            <input type="number" class="col-sm-10 form-control" name='amount' id="amount">
+          </div>
         </div>
-        <div>
-            <b > Κατηγορία Εξόδου</b>
+        <fieldset class="form-group">
+          <div class="row">
+            <legend class="col-form-label col-sm-2 pt-0">Είδος Εξόδου</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="expenseType" id="tenantExpense" value="tenantExpense" checked>
+                <label class="form-check-label" for="tenantExpense">
+                  Ενοικιαστές
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="expenseType" id="ownersExpense" value="ownersExpense">
+                <label class="form-check-label" for="ownersExpense">
+                  Ιδιοκτήτες
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        
+        <div class="form-group row">
+          <div class="w-100 pt-5">
+            <button type="submit" class=" w-50 btn btn-primary">Υποβολή</button>
+          </div>
         </div>
-        <div class="bottom-div">
-            <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Επιλέξτε κατηγορία
-            </a>
-        </div>
-        <div>
-            <b> Ποσό</b>
-        </div>
-        <div class="bottom-div">
-            <input type="number"><b>€</b>
-        </div>
-        <div>
-            <b >Το ποσό επιβαρύνει</b>
-        </div>
-        <div class="btn-group bottom-div" data-toggle="buttons">
-            <label class="btn btn-primary active">
-                <input type="radio" name="options" id="option1" autocomplete="off" checked> Ένοικους
-            </label>
-            <label class="btn btn-primary">
-                <input type="radio" name="options" id="option2" autocomplete="off"> Ιδιοκτήτες
-            </label>
-        </div>
-    </form>
+      </form>
     
-    <button type="button" class="btn main-button">Προσθήκη Εξόδου</button>
 </div>
 
 <%- include ('../partials/user-footer.ejs')  %> 

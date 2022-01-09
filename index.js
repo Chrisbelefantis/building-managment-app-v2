@@ -60,7 +60,7 @@ app.post('/login',(req,res)=>{
                             config.JWTKey, {
                             expiresIn: "1h"
                         })
-                        console.log(token);
+
                         res.cookie('AuthToken', token);
                         
                         if(userData.isAdmin){

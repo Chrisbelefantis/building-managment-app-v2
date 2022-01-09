@@ -1,5 +1,35 @@
 <%- include ('../partials/user-header.ejs',{section: 'dept', isBuldingAdmin: userData.isAppartmentBuildingAdmin })  %> 
 
+<% if (locals.message) { %>
+    <div class="modal show" id="myModal" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Προσθήκη Εξόδων</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <p> <%- message %> </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <script>
+        $(window).on('load', function() {
+          $('#myModal').modal('show');
+      });
+    </script>
+   
+  <% } %>
+
+
+
 <div class="main-container">
     <h4>Λογαριασμός Κοινοχρήστων</h4>
     <br>
@@ -35,20 +65,15 @@
             </tr>
         </thead>
         <tbody class="text-center">
-            <tr>
-                <td>Συντήρηση Ανελκυστήρα</th>
+            <% for( let index = 0; index < dept_records.length; index++ ) { %>
+                <tr>
+                <td><%- dept_records[index].description %> </th>
                 <td>Ένοικος</td>
-                <td>65$</td>
+                <td></td>
                 <td>39/10000</td>
-                <td>2,54$</td>
+                <td><%- dept_records[index].amount %> €</td>
             </tr>
-            <tr>
-                <td>Τοπικός Καθαρισμός</th>
-                <td>Ένοικος</td>
-                <td>70$</td>
-                <td>39/10000</td>
-                <td>2,54$</td>
-            </tr>
+            <% } %>
 
         </tbody>
     </table>
@@ -57,7 +82,7 @@
         <tbody>
             <tr>
                 <td><strong>'Εξοδο Ιδιοκτησίας<strong></td>
-                <td> ?>€</td>
+                <td> €</td>
             </tr>
             <tr>
                 <td><strong>Έξοδα Ενοικιαστή<strong></td>
@@ -65,13 +90,8 @@
             </tr>
 
             <tr>
-                <td><strong>'Εκπρόθεσμα Ποσά' ή  'Ποσό Από Ρύθμιση Οφειλής'<strong></td>
-                <td>€</td>
-            </tr>
-
-            <tr>
                 <td><strong>Σύνολο<strong></td>
-                <td>100€</td>
+                <td><%- sum %> €</td>
             </tr>
            
         </tbody>

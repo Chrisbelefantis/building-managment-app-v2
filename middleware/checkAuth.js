@@ -8,7 +8,6 @@ const checkAuth = (route) =>{
             const decoded = jwt.verify(token, config.JWTKey);
             req.userData = decoded;
             
-            console.log(req.userData)
             if(route==='admin' && req.userData.isAdmin===true){
                 next()
             }
