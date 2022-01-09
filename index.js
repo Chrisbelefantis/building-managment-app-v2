@@ -63,16 +63,19 @@ app.post('/login',(req,res)=>{
                         console.log(token);
                         res.cookie('AuthToken', token);
                         
-                        if(userData.isAppartmentBuildingAdmin){
+                        if(userData.isAdmin){
                             res.redirect('/admin/building-management')
                         }
+                        else if(userData.isAppartmentBuildingAdmin){
+                            res.redirect('/user/dept')
+                        }   
                         else{
                             res.redirect('/user/dept')
                         }
 
                     }
                     else{
-                        res.redirect('/?auth=failed');
+                        res.redirect('/?auth=failed')
                     }
 
                 }

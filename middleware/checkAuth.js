@@ -8,10 +8,14 @@ const checkAuth = (route) =>{
             const decoded = jwt.verify(token, config.JWTKey);
             req.userData = decoded;
             
-            if(route==='admin' && req.userData.isAppartmentBuildingAdmin===1){
+            console.log(req.userData)
+            if(route==='admin' && req.userData.isAdmin===true){
                 next()
             }
-            else if (route==='user' && req.userData.isAppartmentBuildingAdmin===0){
+            else if (route==='user' && req.userData.isAppartmentBuildingAdmin===1 && req.userData.isAdmin===false){
+                next()
+            }
+            else if (route==='user' && req.userData.isAppartmentBuildingAdmin===0 && req.userData.isAdmin===false){
                 next()
             }
             else{

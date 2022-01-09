@@ -1,0 +1,46 @@
+<%- include ('../partials/user-header.ejs',{section: 'expenses_addition', isBuldingAdmin: userData.isAppartmentBuildingAdmin })  %> 
+
+<div class="main-container">
+    <h2>Φόρμα Προσθήκης Εξόδων σε Πολυκατοικία</h2>
+
+   
+    <form>
+        <div>
+            <b >Επιλέξτε Πολυκατοικία</b>
+        </div>
+        <div class="bottom-div">
+            <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Επιλέξτε πολυκατοικία
+            </a>
+        </div>
+        <div>
+            <b > Κατηγορία Εξόδου</b>
+        </div>
+        <div class="bottom-div">
+            <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Επιλέξτε κατηγορία
+            </a>
+        </div>
+        <div>
+            <b> Ποσό</b>
+        </div>
+        <div class="bottom-div">
+            <input type="number"><b>€</b>
+        </div>
+        <div>
+            <b >Το ποσό επιβαρύνει</b>
+        </div>
+        <div class="btn-group bottom-div" data-toggle="buttons">
+            <label class="btn btn-primary active">
+                <input type="radio" name="options" id="option1" autocomplete="off" checked> Ένοικους
+            </label>
+            <label class="btn btn-primary">
+                <input type="radio" name="options" id="option2" autocomplete="off"> Ιδιοκτήτες
+            </label>
+        </div>
+    </form>
+    
+    <button type="button" class="btn main-button">Προσθήκη Εξόδου</button>
+</div>
+
+<%- include ('../partials/user-footer.ejs')  %> 
