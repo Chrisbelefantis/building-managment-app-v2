@@ -60,7 +60,7 @@
                 <th scope="col">Τίτλος Εξόδου</th>
                 <th scope="col">Συμμετέχοντες</th>
                 <th scope="col">Συνολικό Ποσό</th>
-                <th scope="col">Συντελεστής Διαμερίσματος</th>
+                <th scope="col">Ημερομηνία Καταγραφής</th>
                 <th scope="col">Συμμετοχή</th>
             </tr>
         </thead>
@@ -68,10 +68,10 @@
             <% for( let index = 0; index < dept_records.length; index++ ) { %>
                 <tr>
                 <td><%- dept_records[index].description %> </th>
-                <td>Ένοικος</td>
-                <td></td>
-                <td>39/10000</td>
-                <td><%- dept_records[index].amount %> €</td>
+                <td><%- dept_records[index].is_owner_expense ? "Ιδιοκτήτες" : "Ένοικοι" %></td>
+                <td><%- dept_records[index].expense_amount %> €</td>
+                <td><%- dept_records[index].date %></td>
+                <td><%- dept_records[index].dept_amount %> €</td>
             </tr>
             <% } %>
 
@@ -82,11 +82,11 @@
         <tbody>
             <tr>
                 <td><strong>'Εξοδο Ιδιοκτησίας<strong></td>
-                <td> €</td>
+                <td><%- owners_sum %>  €</td>
             </tr>
             <tr>
                 <td><strong>Έξοδα Ενοικιαστή<strong></td>
-                <td>€</td>
+                <td><%- tenants_sum %> €</td>
             </tr>
 
             <tr>
